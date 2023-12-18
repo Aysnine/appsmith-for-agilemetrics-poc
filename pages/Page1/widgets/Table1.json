@@ -67,8 +67,9 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1702890731229,
+    "columnUpdatedAt": 1702891103271,
     "originalBottomRow": 32,
+    "primaryColumnId": "project_id",
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 29,
     "widgetName": "Table1",
@@ -93,7 +94,7 @@
     "parentRowSpace": 10,
     "hideCard": false,
     "mobileRightColumn": 34,
-    "dynamicTriggerPathList": [],
+    "dynamicTriggerPathList": [{"key": "primaryColumns.EditActions1.onSave"}],
     "borderWidth": "1",
     "primaryColumns": {
         "EditActions1": {
@@ -113,7 +114,7 @@
             "validation": {},
             "isCellVisible": true,
             "isDerived": true,
-            "textSize": "0.875rem",
+            "onSave": "{{project_test_enabled.run({\n  // \"key\": \"value\",\n}).then(() => {\n  project_test.run();\n});}}",
             "discardButtonVariant": "TERTIARY",
             "buttonStyle": "rgb(3, 179, 101)",
             "allowCellWrapping": false,
@@ -126,7 +127,6 @@
             "columnType": "editActions",
             "thousandSeparator": true,
             "saveActionLabel": "Save",
-            "horizontalAlignment": "LEFT",
             "isCellEditable": false,
             "decimals": 0,
             "saveBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
@@ -136,8 +136,7 @@
             "saveIconAlign": "left",
             "originalId": "EditActions1",
             "discardBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-            "currencyCode": "USD",
-            "verticalAlignment": "CENTER"
+            "currencyCode": "USD"
         },
         "updated_at": {
             "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"updated_at\"]))}}",
