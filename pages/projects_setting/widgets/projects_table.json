@@ -72,7 +72,7 @@
     "primaryColumnId": "project_id",
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 29,
-    "widgetName": "Table1",
+    "widgetName": "projects_table",
     "defaultPageSize": 0,
     "columnOrder": [
         "client",
@@ -99,9 +99,9 @@
     "primaryColumns": {
         "EditActions1": {
             "computedValue": "",
-            "saveButtonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+            "saveButtonColor": "{{projects_table.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
             "discardIconAlign": "left",
-            "isSaveDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
+            "isSaveDisabled": "{{projects_table.processedTableData.map((currentRow, currentIndex) => ( !projects_table.updatedRowIndices.includes(currentIndex)))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "EditActions1",
@@ -114,13 +114,13 @@
             "validation": {},
             "isCellVisible": true,
             "isDerived": true,
-            "onSave": "{{project_test_enabled.run({\n  // \"key\": \"value\",\n}).then(() => {\n  project_test.run();\n});}}",
+            "onSave": "{{projects_table_update_enabled.run({\n  // \"key\": \"value\",\n}).then(() => {\n  projects_table_query.run();\n});}}",
             "discardButtonVariant": "TERTIARY",
             "buttonStyle": "rgb(3, 179, 101)",
             "allowCellWrapping": false,
             "index": 7,
             "isDiscardVisible": true,
-            "isDiscardDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
+            "isDiscardDisabled": "{{projects_table.processedTableData.map((currentRow, currentIndex) => ( !projects_table.updatedRowIndices.includes(currentIndex)))}}",
             "isVisible": true,
             "label": "Save / Discard",
             "discardActionLabel": "Discard",
@@ -129,17 +129,17 @@
             "saveActionLabel": "Save",
             "isCellEditable": false,
             "decimals": 0,
-            "saveBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+            "saveBorderRadius": "{{projects_table.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
             "width": 150,
             "enableFilter": true,
             "sticky": "right",
             "saveIconAlign": "left",
             "originalId": "EditActions1",
-            "discardBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+            "discardBorderRadius": "{{projects_table.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
             "currencyCode": "USD"
         },
         "updated_at": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"updated_at\"]))}}",
+            "computedValue": "{{projects_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"updated_at\"]))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "updated_at",
@@ -173,7 +173,7 @@
             "verticalAlignment": "CENTER"
         },
         "project_id": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"project_id\"]))}}",
+            "computedValue": "{{projects_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"project_id\"]))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "project_id",
@@ -207,7 +207,7 @@
             "verticalAlignment": "CENTER"
         },
         "client": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"client\"]))}}",
+            "computedValue": "{{projects_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"client\"]))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "client",
@@ -241,7 +241,7 @@
             "verticalAlignment": "CENTER"
         },
         "created_at": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"created_at\"]))}}",
+            "computedValue": "{{projects_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"created_at\"]))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "created_at",
@@ -275,7 +275,7 @@
             "verticalAlignment": "CENTER"
         },
         "project_code": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"project_code\"]))}}",
+            "computedValue": "{{projects_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"project_code\"]))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "project_code",
@@ -309,7 +309,7 @@
             "verticalAlignment": "CENTER"
         },
         "project_name": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"project_name\"]))}}",
+            "computedValue": "{{projects_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"project_name\"]))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "project_name",
@@ -343,7 +343,7 @@
             "verticalAlignment": "CENTER"
         },
         "enabled": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"enabled\"]))}}",
+            "computedValue": "{{projects_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"enabled\"]))}}",
             "isEditable": true,
             "notation": "standard",
             "alias": "enabled",
@@ -380,11 +380,11 @@
     "key": "bz251lha4a",
     "canFreezeColumn": true,
     "isDeprecated": false,
-    "rightColumn": 34,
+    "rightColumn": 53,
     "textSize": "0.875rem",
     "widgetId": "a4bbc7rgme",
     "minWidth": 450,
-    "tableData": "{{project_test.data}}",
+    "tableData": "{{projects_table_query.data}}",
     "label": "Data",
     "searchKey": "",
     "parentId": "0",

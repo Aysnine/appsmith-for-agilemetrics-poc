@@ -1,6 +1,6 @@
 {
     "mobileBottomRow": 4,
-    "widgetName": "Text1",
+    "widgetName": "projects_table_header",
     "displayName": "Text",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
     "searchTags": [
@@ -28,7 +28,7 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "Total {{project_test.data.length}}",
+    "text": "Total {{projects_table_query.data.length}}",
     "key": "mxr17qggdh",
     "isDeprecated": false,
     "rightColumn": 6,

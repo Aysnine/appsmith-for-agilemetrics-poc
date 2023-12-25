@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "project_test_enabled",
+    "name": "projects_table_update_enabled",
     "datasource": {
       "name": "agilemetrics_app_by_cockroach",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Page1",
+    "pageId": "projects_setting",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE public.\"project_test\" SET\n    \"enabled\" = {{Table1.selectedRow.enabled}}\n  WHERE project_id = {{Table1.selectedRow.project_id}}",
+      "body": "UPDATE public.\"project_test\" SET\n    \"enabled\" = {{projects_table.selectedRow.enabled}}\n  WHERE project_id = {{projects_table.selectedRow.project_id}}",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,8 +36,8 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Table1.selectedRow.enabled",
-      "Table1.selectedRow.project_id"
+      "projects_table.selectedRow.enabled",
+      "projects_table.selectedRow.project_id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
@@ -45,7 +45,7 @@
     "userPermissions": [],
     "createdAt": "2023-12-18T09:15:41Z"
   },
-  "id": "Page1_project_test_enabled",
+  "id": "projects_setting_projects_table_update_enabled",
   "deleted": false,
   "gitSyncId": "657fbdce6f42b42138da8e9e_65800dbdecaab0469f4cd5b9"
 }

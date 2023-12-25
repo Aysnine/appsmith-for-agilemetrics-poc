@@ -1,3 +1,0 @@
-UPDATE public."project_test" SET
-    "enabled" = {{Table1.selectedRow.enabled}}
-  WHERE project_id = {{Table1.selectedRow.project_id}}
